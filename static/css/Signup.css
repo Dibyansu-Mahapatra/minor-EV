@@ -1,0 +1,82 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.Nav_Bar {
+  position: absolute;
+  width: 100%;
+  /* height: 60px; */
+  left: 0px;
+  top: 0px;
+  background: rgba(76, 159, 255, 0.8);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px 0;
+}
+.signup_header {
+  position: absolute;
+  width: 200px;
+  height: 48px;
+  left: 750px;
+  top: 100px;
+  background: #4c9fff;
+  border-radius: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  text-align: center;
+}
+.name input {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: 750px;
+  top: 200px;
+  background: #ffffff;
+  box-shadow: 8px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  /* background: none; */
+  border: none;
+  /* outline: none; */
+}
+
+.email input {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: 550px;
+  top: 270px;
+  background: #ffffff;
+  box-shadow: 8px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  border: none;
+}
+.password input {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: 900px;
+  top: 270px;
+  background: #ffffff;
+  box-shadow: 8px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  border: none;
+}
+.phone input {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: 750px;
+  top: 350px;
+  background: #ffffff;
+  box-shadow: 8px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  border: none;
+}
