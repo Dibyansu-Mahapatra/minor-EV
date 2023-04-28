@@ -26,12 +26,16 @@ def index():
         else:
             return render_template('index.html')
     return render_template('login _1.html')
+# @app.route('/')
+# def home():
+#     return render_template('loading.html')
 @app.route('/register/')
 def register():
-    return render_template('map_test.htm')
+    return render_template('login.html')
 @app.route('/signin/')
 def signin():
-    return render_template('login.html')
+    return render_template('index.html')
+    
 
 
 
