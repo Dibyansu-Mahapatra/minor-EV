@@ -11,7 +11,7 @@ def register():
     return render_template('login.html')
 @app.route('/signin/')
 def signin():
-    return render_template('battery.html')
+    return render_template('index.html')
     
 
 if __name__ == "__main__":
