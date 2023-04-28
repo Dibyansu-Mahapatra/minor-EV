@@ -7,3 +7,7 @@ env/
 /venv
 venv/
 VirEnv/
+
+user1.db
+
+/user1.db
