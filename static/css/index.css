@@ -8,6 +8,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  /* overflow-x: hidden; */
 }
 .nav_bar {
   position: absolute;
@@ -20,7 +21,7 @@ body {
   color: whitesmoke;
   font-size: 2vw;
   text-align: center;
-  padding: 15px 0;
+  padding: 10px 0;
   opacity: 80%;
   font-weight: 700;
 
@@ -28,25 +29,53 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
+@property --scale {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+#log_button {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: scale(var(--scale));
+  animation: pulse 500ms alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    --scale: 1;
+  }
+  100% {
+    --scale: 1.5;
+  }
+}
 .row {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.left {
-  transition: 0.75s;
-  width: 300px;
+
+.capsule-box {
+  transition: 0.25s;
+  width: 250px;
   height: 50px;
-  border-radius: 24px;
+  border-radius: 50px;
   background: rgba(50, 50, 52, 0.5);
   border: none;
   outline: none;
-  margin: 20px;
   color: white;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 50px;
+  margin-left: 25px;
+  margin-top: 20px;
   /* opacity: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   /*New Glassmorphism Code*/
   backdrop-filter: blur(8px);
@@ -55,37 +84,64 @@ body {
   transform: translate(-6%);
 }
 
-.center {
-  transition: 0.75s;
-  width: 420px;
-  height: 420px;
-  border-radius: 24px;
+.battery-usage {
+  transition: 0.25s;
+  width: 300px;
+  height: 240px;
+  border-radius: 50px;
   background: rgba(50, 50, 52, 0.5);
   border: none;
   outline: none;
-  margin: 20px;
   color: white;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 50px;
+  margin-top: 40px;
+  /* opacity: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /*New Glassmorphism Code*/
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transform: translate(-6%);
+}
+
+.left {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.center {
+  width: 480px;
+  height: 480px;
+  border-radius: 48px;
+  background: rgba(50, 50, 52, 0.5);
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  /* color: white;
+  font-size: 20px;
+  font-weight: 600; */
 
   /*New Glassmorphism Code*/
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 .right {
-  transition: 0.75s;
+  transition: 0.25s;
   width: 300px;
   height: 200px;
   border-radius: 24px;
   background: rgba(50, 50, 52, 0.5);
   border: none;
   outline: none;
-  margin: 20px;
   color: white;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
   /* opacity: 80%; */
 
   /*New Glassmorphism Code*/
@@ -93,7 +149,7 @@ body {
   -webkit-backdrop-filter: blur(8px);
 }
 
-.left:hover {
+.capsule-box:hover {
   transition: 0.75s;
   background: rgba(175, 175, 175, 1);
   backdrop-filter: blur(8px);
@@ -127,7 +183,7 @@ body {
   color: white;
 }
 .content {
-  margin-left: 30%;
+  margin-left: 20%;
 }
 .overlay_foot {
   color: white;
@@ -137,9 +193,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 90%;
-  width: 90%;
-  border-radius: 24px;
+  height: 94%;
+  width: 94%;
+  border-radius: 36px;
 }
 .main-outer {
   display: flex;
@@ -165,7 +221,7 @@ body {
   height: 25px;
   background-color: transparent;
   border: 5px solid;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .box:after {
   content: "";
@@ -176,20 +232,11 @@ body {
   height: 93%;
   border-radius: 10px;
   background: #0ef184;
-  animation: animate 2.5s linear infinite;
+  animation: animate 2.5s ease-in-out alternate infinite;
 }
 @keyframes animate {
   0% {
     width: 0%;
-  }
-  25% {
-    width: 25%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
   }
   100% {
     width: 95%;

@@ -14,13 +14,14 @@
     <!-- NAVIGATION BAR -->
     <div class="nav_bar">
       <!-- WEB APP NAME -->
-      <div class="content">Charging Station Locator</div>
+      <div class="content"><center>Charging Station Locator</center></div>
 
       <!-- LOGIN BUTTON-->
       <div class="nav_login">
         <button
           onclick="document.getElementById('id01').style.display='block'"
           style="width: auto"
+          id="log_button"
         >
           Login
         </button>
@@ -31,7 +32,12 @@
     <br /><br /><br />
     <!-- FIRST ROW OF CARDS -->
     <div class="row">
-      <div class="left"><div class="left"></div></div>
+      <div class="left">
+        <div class="capsule-box">Level Locked</div>
+        <div class="capsule-box">Level Locked</div>
+        <div class="capsule-box">Level Locked</div>
+        <div class="battery-usage">No Data for Graph</div>
+      </div>
       <div class="center">
         <div id="map"></div>
       </div>
@@ -101,10 +107,9 @@
     <!-- ADDED SCRIPT FOR GOOGLE MAP -->
     <script>
       function initMap() {
-        var location1 = { lat: 33.1404106, lng: -96.8054861 }; // sleep dallas
-        var location2 = { lat: 32.8919358, lng: -117.2031495 }; // san diego sleep therapy
-        var location3 = { lat: 33.9466277, lng: -84.3320862 }; // sleep better georgia
-
+        var location1 = { lat: 20.353616, lng: 85.819859 }; // Kalinga
+        var location2 = { lat: 20.291568, lng: 85.856088 }; // Esplanade
+        var location3 = { lat: 20.250627, lng: 85.788261 }; // Cosmo
         // CREATE MAP AND DEFINE ELEMENT TO DISPLAY
         var map = new google.maps.Map(document.getElementById("map"), {
           center: location1,
@@ -113,22 +118,22 @@
         });
 
         var location1_marker = new google.maps.Marker({
-          // sleep dallas
-          title: "sleep dallas",
+          // Kalinga
+          title: "Kalinga",
           position: location1,
           map: map,
         });
 
         var location2_marker = new google.maps.Marker({
-          // san diego sleep therapy
-          title: "san diego",
+          // Esplanade
+          title: "Esplanade",
           position: location2,
           map: map,
         });
 
         var location3_marker = new google.maps.Marker({
-          // sleep better georgia
-          title: "sleep better",
+          // Cosmopolis
+          title: "Cosmopolis",
           position: location3,
           map: map,
         });
