@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Monthly Income Line Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="incomeChart"></canvas>
+
+    <script>
+      const chartData = {
+        labels: [
+          "20 km",
+          "40 km",
+          "60 km",
+          "80 km",
+          "100 km",
+          "120 km",
+          "140 km",
+          "160 km",
+          "180 km",
+          "200 km",
+          "220 km",
+          "240 km",
+          "260 km",
+          "280 km",
+          "300 km",
+          "320 km",
+          "340 km",
+          "360 km",
+          "380 km",
+          "400 km",
+        ],
+        datasets: [
+          {
+            label: "Monthly Income",
+            data: [
+              100, 90, 80, 70, 60, 50, 40, 30, 10, 0, 17, 34, 51, 68, 75, 85,
+              90, 80, 70, 70,
+            ],
+            borderColor: "blue",
+            tension: 0.3,
+          },
+        ],
+      };
+
+      const incomeChart = new Chart(document.getElementById("incomeChart"), {
+        type: "line",
+        data: chartData,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

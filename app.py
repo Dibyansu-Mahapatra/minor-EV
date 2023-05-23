@@ -24,7 +24,7 @@ def index():
         if len(results) == 0:
             print("Sorry incorrect credentials")
         else:
-            return render_template('index.html')
+            return render_template('pre.html')
     return render_template('login _1.html')
 # @app.route('/')
 # def home():
